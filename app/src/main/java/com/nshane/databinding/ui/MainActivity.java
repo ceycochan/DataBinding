@@ -2,6 +2,7 @@ package com.nshane.databinding.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             tv_desc.setVisibility(visibility);
             if (user != null) {
                 tv_desc.setText(String.format("积分:%d 等级:%d", user.getScore(), user.getLevel()));
+                Log.d("cg", user.getScore() + "|||" + user.getLevel());
             }
         }
 
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            btn_exit.setText(user==null?"登陆":"注销");
+            btn_exit.setText(user == null ? "登陆" : "注销");
         }
     }
 
